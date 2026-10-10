@@ -1,0 +1,132 @@
+/* ==========================================
+   ESTILOS GENERALES Y FUENTES
+   ========================================== */
+:root {
+    --primary-color: #0077b6;       /* Azul médico principal */
+    --secondary-color: #00b4d8;     /* Azul claro para resaltado */
+    --accent-color: #90e0ef;        /* Tono suave para bordes/detalles */
+    --bg-color: #f4f7f6;            /* Fondo grisáceo médico suave */
+    --card-bg: #ffffff;            /* Fondo blanco para tarjetas */
+    --text-color: #2b2d42;          /* Texto oscuro para alta legibilidad */
+    --text-muted: #6c757d;         /* Texto secundario */
+    --border-radius: 12px;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   ENCABEZADOS
+   ========================================== */
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #023e8a;
+    font-size: 1.8rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    text-align: right;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-top: 40px;
+    border-top: 1px solid var(--accent-color);
+    padding-top: 15px;
+}
+
+/* ==========================================
+   TEXTO Y PÁRRAFOS
+   ========================================== */
+p {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    white-space: pre-line; /* Respeta los saltos de línea de tu código HTML */
+    font-size: 1.05rem;
+    border-left: 5px solid var(--primary-color);
+}
+
+/* ==========================================
+   GALERÍA DE IMÁGENES
+   ========================================== */
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: 15px 0;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================
+   SECCIÓN MULTIMEDIA (Audio y Vídeo)
+   ========================================== */
+audio, video {
+    width: 100%;
+    margin: 15px 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    outline: none;
+}
+
+video {
+    max-height: 450px;
+    background-color: #000;
+}
+
+/* ==========================================
+   DISEÑO ADAPTATIVO (Dispositivos móviles)
+   ========================================== */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+}
